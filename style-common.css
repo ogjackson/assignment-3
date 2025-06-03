@@ -12,3 +12,7 @@ ul {
 .icon {
     width: 25px;
 }
+
+#homepage-cta {
+    justify-content: center;
+}
