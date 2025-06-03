@@ -1,3 +1,14 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
 .icon {
-    width: 100px;
+    width: 25px;
 }
