@@ -1,18 +1,28 @@
 const header = `
     <ul>
-        <li>Home</li>
-        <li>Shop</li>
-        <li>Sale</li>
-        <li>About</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="sale.html">Sale</a></li>
+        <li><a href="about.html">About</a></li>
      </ul>
 
-    <a class="logo">proudfurniture</a>
+    <a href="index.html" class="logo">proudfurniture</a>
 
     <div>
         <img class="icon" src="assets/common/search-black.svg"></img>
+        <input type="text" id="searchBox" placeholder="Search...">
         <img class="icon" src="assets/common/cart-black.svg"></img>
      </div>
 
     `
 
-document.getElementById('header').innerHTML = header;
+document.getElementById("header").innerHTML = header;
+
+const searchBox = document.getElementById('searchBox');
+
+searchBox.addEventListener("keypress", (search) => {
+    if (search.key === "Enter") {
+        const query = searchBox.value;
+        console.log(query)
+    }
+})
