@@ -19,10 +19,22 @@ const header = `
 document.getElementById("header").innerHTML = header;
 
 const searchBox = document.getElementById('searchBox');
+const results = document.getElementById('results');
 
 searchBox.addEventListener("keypress", (search) => {
     if (search.key === "Enter") {
-        const query = searchBox.value;
-        console.log(query)
+        const query = searchBox.value.replaceAll(' ', '');
+        console.log(query);
+        if (query) {
+            window.location.href = `search.html?q=${query}`;
+        }
     }
-})
+});
+
+if (query) {
+    let resultsCount = products.filter(queryMatch);
+
+    function queryMatch(product) {
+        return product.name.toLowerCase().includes(query) || product.type.toLowerCase().includes(query);
+    }
+}

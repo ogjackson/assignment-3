@@ -1,7 +1,7 @@
 const products = [
     {
         id: 'recliner1',
-        type: '',
+        type: 'recliner',
         name: 'recliner',
         image: '/assets/placeholder.jpg',
         description: 'lorem ipsum',
