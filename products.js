@@ -9,9 +9,21 @@ const products = [
         sizes: '',
         materials: ''
     },
+
+    {
+        id: 'recliner2',
+        type: 'recliner',
+        name: 'recliner',
+        image: '/assets/placeholder.jpg',
+        description: 'im nice at ping pong',
+        price: '200 dollary doos',
+        sizes: '',
+        materials: ''
+    },
 ]
 
-const product = products[0];
+const productID = new URLSearchParams(window.location.search).get('id');
+const product = products.find(product => product.id === productID)
 
 
 document.getElementById("name").textContent = product.name;
