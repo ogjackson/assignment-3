@@ -4,10 +4,10 @@ const products = [
         type: 'Recliner',
         name: 'Admiral',
         image: '/assets/placeholder.jpg',
-        description: 'lorem ipsum',
+        description: 'The ultimate in comfort and support, available in fabric or leather.',
         price: '100 dollary doos',
-        sizes: [],
-        materials: []
+        sizes: ['1', '2', '3', '4'],
+        materials: ['1', '2', '3', '4', '5']
     },
 
     {
@@ -15,10 +15,10 @@ const products = [
         type: 'Recliner',
         name: 'Premier',
         image: '/assets/placeholder.jpg',
-        description: 'im nice at ping pong',
+        description: 'The ultimate in comfort and support, available in fabric or leather, with soft, medium or firm seating foam.',
         price: '200 dollary doos',
-        sizes: [],
-        materials: []
+        sizes: ['1', '2', '3'],
+        materials: ['1', '2', '3', '4', '5']
     },
 ]
 
@@ -31,3 +31,21 @@ document.getElementById("image").src = product.image;
 document.getElementById("image").alt = product.name;
 document.getElementById("description").textContent = product.description;
 document.getElementById("price").textContent = product.price;
+
+const sizes = document.getElementById("size");
+sizes.innerHTML = "<option>Select your size</option>";
+product.sizes.forEach(size => {
+    const option = document.createElement("option");
+    option.value = size;
+    option.textContent = size;
+    sizes.appendChild(option);
+});
+
+const materials = document.getElementById("material");
+materials.innerHTML = "<option>Select your material</option>";
+product.materials.forEach(material => {
+    const option = document.createElement("option");
+    option.value = material;
+    option.textContent = material;
+    materials.appendChild(option);
+});
