@@ -9,11 +9,16 @@ const header = `
     <a href="index.html" class="logo">proudfurniture</a>
 
     <div>
-        <img class="icon" src="assets/common/search-black.svg"></img>
+        <img class="icon" id="searchButton" src="assets/common/search-black.svg"></img>
         <input type="text" id="searchBox" placeholder="Search...">
-        <img class="icon" src="assets/common/cart-black.svg"></img>
+        <img class="icon" id="cartButton" src="assets/common/cart-black.svg"></img>
      </div>
+`
 
-    `
+const cart = `
+    <div id="cart">
+             <h2>CART</h2>
+    </div>
+`
 
 document.getElementById("header").innerHTML = header;
