@@ -37,4 +37,10 @@ if (query) {
     function queryMatch(product) {
         return product.name.toLowerCase().includes(query) || product.type.toLowerCase().includes(query);
     }
+
+    if (resultsCount > 0) {
+
+    } else {
+        results.innerHTML = "<p>this search came up empty :(</p>"
+    }
 }
