@@ -1,24 +1,24 @@
 const products = [
     {
-        id: 'recliner1',
-        type: 'recliner',
-        name: 'recliner',
+        id: 'admiral',
+        type: 'Recliner',
+        name: 'Admiral',
         image: '/assets/placeholder.jpg',
         description: 'lorem ipsum',
         price: '100 dollary doos',
-        sizes: '',
-        materials: ''
+        sizes: [],
+        materials: []
     },
 
     {
-        id: 'recliner2',
-        type: 'recliner',
-        name: 'recliner',
+        id: 'premier',
+        type: 'Recliner',
+        name: 'Premier',
         image: '/assets/placeholder.jpg',
         description: 'im nice at ping pong',
         price: '200 dollary doos',
-        sizes: '',
-        materials: ''
+        sizes: [],
+        materials: []
     },
 ]
 

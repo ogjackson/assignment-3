@@ -25,7 +25,26 @@ if (query) {
         const ul = document.createElement("ul");
         resultsCount.forEach(product => {
             const li = document.createElement("li");
-            li.textContent = product.name;
+
+            const productImg = document.createElement("img");
+            productImg.src = product.image;
+        
+
+            const productLink = document.createElement("a");
+            productLink.href = `product.html?id=${product.id}`;
+            productLink.textContent = product.name;
+    
+            const productType = document.createElement("p")
+            productType.textContent = product.type
+
+            const productPrice = document.createElement("p")
+            productPrice.textContent = product.price
+        
+            li.appendChild(productImg);
+            li.appendChild(productLink);
+            li.appendChild(productType);
+            li.appendChild(productPrice);
+    
             ul.appendChild(li);
         });
         results.innerHTML = "";
