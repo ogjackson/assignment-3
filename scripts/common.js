@@ -15,10 +15,25 @@ const header = `
      </div>
 `
 
-const cart = `
+const cartMenu = `
     <h2>CART</h2>
     <div id="cartContents"></div>
 `
 
 document.getElementById("header").innerHTML = header;
-document.getElementById("cart").innerHTML = cart;
+document.getElementById("cartMenu").innerHTML = cartMenu;
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function loadCart() {
+    const cartContents = document.getElementById("cartContents")
+    cartContents.innerHTML = "";
+
+    cart.forEach(item => {
+        const cartItem = document.createElement("cartItem");
+        cartItem.textContent = item.name;
+        cartContents.appendChild(cartItem);
+    })
+}
+
+loadCart();
