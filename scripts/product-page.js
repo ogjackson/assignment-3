@@ -36,6 +36,7 @@ addToCart.addEventListener("click", () => {
         price: product.price
     });
 
+    localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart)
     loadCart();
 })
