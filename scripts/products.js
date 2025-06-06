@@ -49,3 +49,13 @@ product.materials.forEach(material => {
     option.textContent = material;
     materials.appendChild(option);
 });
+
+const addToCart = document.getElementById("addToCart");
+const cartContents = document.getElementById("cartContents");
+
+addToCart.addEventListener("click", () => {
+    const cartItem = document.createElement("cartItem")
+    cartItem.textContent = product.name;
+    cartContents.appendChild(cartItem);
+    console.log(product.id)
+})

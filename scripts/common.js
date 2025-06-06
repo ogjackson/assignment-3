@@ -17,7 +17,7 @@ const header = `
 
 const cart = `
     <h2>CART</h2>
-    <div id="cart-contents"></div>
+    <div id="cartContents"></div>
 `
 
 document.getElementById("header").innerHTML = header;
