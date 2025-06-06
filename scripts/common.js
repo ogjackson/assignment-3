@@ -16,9 +16,9 @@ const header = `
 `
 
 const cart = `
-    <div id="cart">
-             <h2>CART</h2>
-    </div>
+    <h2>CART</h2>
+    <div id="cart-contents"></div>
 `
 
 document.getElementById("header").innerHTML = header;
+document.getElementById("cart").innerHTML = cart;
