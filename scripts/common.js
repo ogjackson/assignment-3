@@ -18,6 +18,11 @@ const header = `
 const cartMenu = `
     <h2>CART</h2>
     <div id="cartContents"></div>
+    <div>
+        <p>Subtotal</p>
+        <p id="subtotal"></p>
+    </div>
+    <button id="checkout">Checkout</button>
 `
 
 document.getElementById("header").innerHTML = header;
@@ -29,7 +34,13 @@ function loadCart() {
     const cartContents = document.getElementById("cartContents")
     cartContents.innerHTML = "";
 
+    let subtotal = 0;
+
     cart.forEach(item => {
+
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
             <strong>${item.name}</strong><br>
@@ -41,6 +52,8 @@ function loadCart() {
         cartContents.appendChild(cartItem);
     });
 
+    document.getElementById("subtotal").textContent = `${subtotal}`;
+
     document.querySelectorAll(".removeFromCart").forEach(button => {
         button.addEventListener("click", (click) => {
             const id = click.target.getAttribute("id");
@@ -51,7 +64,10 @@ function loadCart() {
             loadCart();
         });
     });
-
 }
+
+document.getElementById("checkout").addEventListener("click", () => {
+    window.location.href = "checkout.html";
+});
 
 loadCart();

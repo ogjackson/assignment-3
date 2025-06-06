@@ -31,6 +31,7 @@ const addToCart = document.getElementById("addToCart");
 addToCart.addEventListener("click", () => {
     const selectedSize = document.getElementById("size").value;
     const selectedMaterial = document.getElementById("material").value;
+    const itemQuantity = document.getElementById("quantity").value;
 
     if (selectedSize === "Select your size" || selectedMaterial === "Select your material") {
         alert("Please make all required selections.");
@@ -42,7 +43,8 @@ addToCart.addEventListener("click", () => {
         name: product.name,
         price: product.price,
         size: selectedSize,
-        material: selectedMaterial
+        material: selectedMaterial,
+        quantity: itemQuantity
     });
 
     localStorage.setItem("cart", JSON.stringify(cart));
