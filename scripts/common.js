@@ -66,8 +66,8 @@ function loadCart() {
     });
 }
 
-document.getElementById("checkout").addEventListener("click", () => {
-    window.location.href = "checkout.html";
+document.getElementById("payNow").addEventListener("click", () => {
+    window.location.href = "order-confirmation.html";
 });
 
 loadCart();
