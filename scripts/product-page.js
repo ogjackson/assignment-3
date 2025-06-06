@@ -29,11 +29,20 @@ product.materials.forEach(material => {
 const addToCart = document.getElementById("addToCart");
 
 addToCart.addEventListener("click", () => {
+    const selectedSize = document.getElementById("size").value;
+    const selectedMaterial = document.getElementById("material").value;
+
+    if (selectedSize === "Select your size" || selectedMaterial === "Select your material") {
+        alert("Please make all required selections.");
+        return;
+    }
 
     cart.push({
         id: product.id,
         name: product.name,
-        price: product.price
+        price: product.price,
+        size: selectedSize,
+        material: selectedMaterial
     });
 
     localStorage.setItem("cart", JSON.stringify(cart));

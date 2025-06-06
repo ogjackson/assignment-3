@@ -30,10 +30,28 @@ function loadCart() {
     cartContents.innerHTML = "";
 
     cart.forEach(item => {
-        const cartItem = document.createElement("cartItem");
-        cartItem.textContent = item.name;
+        const cartItem = document.createElement("div");
+        cartItem.innerHTML = `
+            <strong>${item.name}</strong><br>
+            ${item.price}<br>
+            ${item.size}<br>
+            ${item.material}
+            <button id="${item.id}" class="removeFromCart">X</button>
+        `;
         cartContents.appendChild(cartItem);
-    })
+    });
+
+    document.querySelectorAll(".removeFromCart").forEach(button => {
+        button.addEventListener("click", (click) => {
+            const id = click.target.getAttribute("id");
+
+            const removedProduct = cart.findIndex(item => item.id === id);
+            cart.splice(removedProduct, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        });
+    });
+
 }
 
 loadCart();
