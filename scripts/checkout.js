@@ -41,6 +41,14 @@ function loadCheckoutCart() {
 
 const payNow = document.getElementById("payNow");
 if (payNow) {payNow.addEventListener("click", () => {
+
+  const addressStorage = {
+        address: document.querySelector('input[name="address"]').value,
+        city: document.querySelector('input[name="city"]').value,
+        postcode: document.querySelector('input[name="postcode"]').value,
+    };
+        localStorage.setItem("checkoutAddress", JSON.stringify(addressStorage));
+
         window.location.href = "order-confirmation.html";
     });
 }
@@ -59,10 +67,11 @@ function loadOrderDetails() {
 
     const checkoutAddress = JSON.parse(localStorage.getItem("checkoutAddress")) || {};
 
-    const orderAddress = document.querySelector("#orderAddress");
-    orderAddress.children[1].textContent = addressInfo.address || "";
-    orderAddress.children[2].textContent = addressInfo.city || "";
-    orderAddress.children[3].textContent = addressInfo.postcode || "";
+    const shippingAddress = document.querySelector("#shippingAddress");
+    shippingAddress.children[1].textContent = checkoutAddress.address || "";
+    shippingAddress.children[2].textContent = checkoutAddress.city || "";
+    shippingAddress.children[3].textContent = checkoutAddress.postcode || "";
 }
 
 loadCheckoutCart()
+loadOrderDetails()
