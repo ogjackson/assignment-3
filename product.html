@@ -14,21 +14,28 @@
     <div id="product">
         <img id="image">
         <section>
-            <a href="">Back</a>
+            <a id="backLink" href="#">Back</a>
             <h1 id="name"></h1>
             <p id="description"></p>
             <span id="price"></span>
             <span>In Stock</span>
+
             <div>
 
-                <label for="size">Size (mm):</label>
-                <select id="size" name="size"></select>
+                <div class="productOptions">
+                    <label for="size">Size (mm):</label>
+                    <select id="size" name="size"></select>
+                </div>
 
-                <label for="material">Material:</label>
-                <select id="material" name="material"></select>
+                <div class="productOptions">
+                    <label for="material">Material:</label>
+                    <select id="material" name="material"></select>
+                </div>
 
-                <label for="quantity">Quantity:</label>
-                <input id="quantity" name="quantity" type="number" min="1" step="1" max="10" value="1"></input>
+                <div class="productOptions">
+                    <label for="quantity">Quantity:</label>
+                    <input id="quantity" name="quantity" type="number" min="1" step="1" max="10" value="1"></input>
+                </div>
 
             </div>
 

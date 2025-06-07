@@ -1,12 +1,15 @@
 const productID = new URLSearchParams(window.location.search).get('id');
 const product = products.find(product => product.id === productID)
 
+document.getElementById("backLink").addEventListener("click", () => {
+    window.history.back();
+});
 
 document.getElementById("name").textContent = product.name;
 document.getElementById("image").src = product.image;
 document.getElementById("image").alt = product.name;
 document.getElementById("description").textContent = product.description;
-document.getElementById("price").textContent = product.price;
+document.getElementById("price").textContent = `$${product.price}`;
 
 const sizes = document.getElementById("size");
 sizes.innerHTML = "<option>Select your size</option>";

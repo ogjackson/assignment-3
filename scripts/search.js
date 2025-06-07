@@ -29,24 +29,40 @@ if (query) {
         resultsCount.forEach(product => {
             const li = document.createElement("li");
 
+            const productLinkImg = document.createElement("a");
+            productLinkImg.href = `product.html?id=${product.id}`;
+            
             const productImg = document.createElement("img");
             productImg.src = product.image;
+            productImg.alt = product.name;
+            
+            productLinkImg.appendChild(productImg);
         
+            const productDetails = document.createElement("div");
+            productDetails.classList.add("productDetails");
 
+            const productNameType = document.createElement("div");
+            productNameType.classList.add("productNameType");
+        
             const productLink = document.createElement("a");
             productLink.href = `product.html?id=${product.id}`;
             productLink.textContent = product.name;
-    
-            const productType = document.createElement("p")
-            productType.textContent = product.type
-
-            const productPrice = document.createElement("p")
-            productPrice.textContent = product.price
         
-            li.appendChild(productImg);
-            li.appendChild(productLink);
-            li.appendChild(productType);
-            li.appendChild(productPrice);
+            const productType = document.createElement("p");
+            productType.textContent = product.type;
+        
+            productNameType.appendChild(productLink);
+            productNameType.appendChild(productType);
+        
+            const productPrice = document.createElement("p");
+            productPrice.classList.add("productPrice");
+            productPrice.textContent = `$${product.price}`;
+
+            productDetails.appendChild(productNameType);
+            productDetails.appendChild(productPrice);
+        
+            li.appendChild(productLinkImg);
+            li.appendChild(productDetails);
     
             ul.appendChild(li);
         });
