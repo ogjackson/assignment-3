@@ -1,11 +1,22 @@
+/* HEADER STYLING */
+
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding: 20px
 }
 
-ul {
+nav ul {
     display: flex;
-    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav div {
+    display: flex;
     gap: 15px;
 }
 
@@ -13,8 +24,41 @@ ul {
     width: 25px;
 }
 
-#homepage, main {
+
+/* CART STYLING */
+
+#cartMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    transform: translate(100%);
+    transition: transform 0.3s ease;
+    background-color: rgb(20, 20, 20);
+}
+
+#cartMenu.active {
+    transform: translate(0)
+}
+
+/* HOMEPAGE */
+
+#homepage main {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    min-height: 80vh; 
+    text-align: center;
+}
+
+#homepage main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 15px;
+    flex-wrap: wrap;
+    text-align: left;
 }
 
 .bgImage {

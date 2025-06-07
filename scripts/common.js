@@ -17,6 +17,7 @@ const header = `
 
 const cartMenu = `
     <h2>CART</h2>
+    <img class="icon" id="closeCart" src="assets/common/close-white.svg"></img>
     <div id="cartContents"></div>
     <div>
         <p>Subtotal</p>
@@ -29,6 +30,14 @@ document.getElementById("header").innerHTML = header;
 document.getElementById("cartMenu").innerHTML = cartMenu;
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+document.getElementById("cartButton").addEventListener("click", () => {
+    document.getElementById("cartMenu").classList.toggle("active");
+});
+
+document.getElementById("closeCart").addEventListener("click", () => {
+    document.getElementById("cartMenu").classList.toggle("active");
+});
 
 function loadCart() {
     const cartContents = document.getElementById("cartContents")
