@@ -13,6 +13,9 @@ searchBox.addEventListener("keypress", (search) => {
 
 const query = new URLSearchParams(window.location.search).get('q');
 
+const resultsFor = document.getElementById("resultsFor");
+resultsFor.textContent = `Results for "${query}"`;
+
 
 if (query) {
     let resultsCount = products.filter(queryMatch);
