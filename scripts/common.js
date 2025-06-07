@@ -1,4 +1,5 @@
 const header = `
+    <section>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
@@ -9,15 +10,18 @@ const header = `
     <a href="index.html" class="logo">proudfurniture</a>
 
     <div>
-        <img class="icon" id="searchButton" src="assets/common/search-black.svg"></img>
+        <img class="icon" id="searchButton" src="assets/common/search-black.svg">
         <input type="text" id="searchBox" placeholder="Search...">
-        <img class="icon" id="cartButton" src="assets/common/cart-black.svg"></img>
+        <img class="icon" id="cartButton" src="assets/common/cart-black.svg">
      </div>
+    </section>
 `
 
 const cartMenu = `
-    <h2>CART</h2>
-    <img class="icon" id="closeCart" src="assets/common/close-white.svg"></img>
+    <div id="cartHeader">
+        <p>CART</p>
+        <img class="icon" id="closeCart" src="assets/common/close-white.svg">
+    </div>
     <div id="cartContents"></div>
     <div>
         <p>Subtotal</p>
