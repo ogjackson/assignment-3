@@ -13,7 +13,7 @@ const header = `
 
      </ul>
 
-    <a href="./index.html" class="logo">proudfurniture</a>
+    <a href="./index.html" class="logo"><b>proud</b>furniture</a>
 
     <div>
         <img class="icon" id="searchButton" src="assets/common/search-black.svg">
