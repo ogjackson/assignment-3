@@ -6,6 +6,12 @@ h1 {
     font-size: 5vw;
 }
 
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 10vw;
+    }
+}
+
 h1, #resultsPage .productPrice {
     font-family: Cormorant;
     font-style: oblique;
