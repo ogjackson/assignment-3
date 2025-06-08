@@ -6,7 +6,7 @@ searchBox.addEventListener("keypress", (search) => {
         let query = searchBox.value.replaceAll(' ', '');
         console.log(query);
         if (query) {
-            window.location.href = `search.html?q=${query}`;
+            window.location.href = `./search.html?q=${query}`;
         }
     }
 });
@@ -30,7 +30,7 @@ if (query) {
             const li = document.createElement("li");
 
             const productLinkImg = document.createElement("a");
-            productLinkImg.href = `product.html?id=${product.id}`;
+            productLinkImg.href = `./product.html?id=${product.id}`;
             
             const productImg = document.createElement("img");
             productImg.src = product.image;
@@ -45,7 +45,7 @@ if (query) {
             productNameType.classList.add("productNameType");
         
             const productLink = document.createElement("a");
-            productLink.href = `product.html?id=${product.id}`;
+            productLink.href = `./product.html?id=${product.id}`;
             productLink.textContent = product.name;
         
             const productType = document.createElement("p");

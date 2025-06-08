@@ -62,7 +62,7 @@ if (payNow) {payNow.addEventListener("click", () => {
     };
         localStorage.setItem("checkoutAddress", JSON.stringify(addressStorage));
 
-        window.location.href = "order-confirmation.html";
+        window.location.href = "./order-confirmation.html";
     });
 }
 

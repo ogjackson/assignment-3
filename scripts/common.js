@@ -1,13 +1,13 @@
 const header = `
     <section>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="sale.html">Sale</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./shop.html">Shop</a></li>
+        <li><a href="./sale.html">Sale</a></li>
+        <li><a href="./about.html">About</a></li>
      </ul>
 
-    <a href="index.html" class="logo">proudfurniture</a>
+    <a href="./index.html" class="logo">proudfurniture</a>
 
     <div>
         <img class="icon" id="searchButton" src="assets/common/search-black.svg">
@@ -89,7 +89,7 @@ function loadCart() {
 }
 
 document.getElementById("checkout").addEventListener("click", () => {
-    window.location.href = "checkout.html";
+    window.location.href = "./checkout.html";
 });
 
 loadCart();
