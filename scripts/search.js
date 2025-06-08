@@ -35,7 +35,9 @@ if (query) {
     
     if (query === "all") {
         resultsCount = products;
-    } else if (resultsCount.length > 0) {
+    }
+    
+    if (resultsCount.length > 0) {
         const ul = document.createElement("ul");
         resultsCount.forEach(product => {
             const li = document.createElement("li");
