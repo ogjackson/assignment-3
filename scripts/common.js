@@ -4,7 +4,7 @@ const header = `
     <img class="icon" id="menuButtonOpen" src="./assets/common/menu-black.svg">
 
     <ul id="mobileMenu">
-        <li><img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg"></li>
+        <img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./shop.html">Shop</a></li>
         <li><a href="./sale.html">Sale</a></li>
@@ -23,6 +23,31 @@ const header = `
     </section>
 `
 
+const headerWhite = `
+    <section>
+
+    <img class="icon" id="menuButtonOpen" src="./assets/common/menu-white.svg">
+
+    <ul id="mobileMenu">
+        <img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./shop.html">Shop</a></li>
+        <li><a href="./sale.html">Sale</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li class="logo" id="mobileLogo"><a href="./index.html">proudfurniture</a></li>
+
+    </ul>
+
+    <a href="./index.html" class="logo"><b>proud</b>furniture</a>
+
+    <div>
+        <img class="icon" id="searchButton" src="assets/common/search-white.svg">
+        <input type="text" id="searchBox" placeholder="Search...">
+        <img class="icon" id="cartButton" src="assets/common/cart-white.svg">
+    </div>
+    </section>
+`
+
 const cartMenu = `
     <div id="cartHeader">
         <p>CART</p>
@@ -38,8 +63,14 @@ const cartMenu = `
     </div>
 `
 
-document.getElementById("header").innerHTML = header;
+
 document.getElementById("cartMenu").innerHTML = cartMenu;
+
+if (window.location.pathname.endsWith("index.html")) {
+    document.getElementById("header").innerHTML = headerWhite;
+} else {
+    document.getElementById("header").innerHTML = header;
+}
 
 const menu = document.getElementById('mobileMenu');
 const openBtn = document.getElementById('menuButtonOpen');

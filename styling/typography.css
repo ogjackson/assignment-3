@@ -1,0 +1,35 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h1, #resultsPage .productPrice {
+    font-family: Cormorant;
+    font-style: oblique;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 5vh;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#backLink {
+    text-decoration: underline;
+}
+
+#homepage h1 {
+    line-height: 0;
+}

@@ -5,7 +5,7 @@ document.getElementById("backLink").addEventListener("click", () => {
     window.history.back();
 });
 
-document.getElementById("name").textContent = product.name;
+document.getElementById("name").innerHTML = `${product.name} <span class="grey">/ ${product.type}</span>`;
 document.getElementById("image").src = product.image;
 document.getElementById("image").alt = product.name;
 document.getElementById("description").textContent = product.description;

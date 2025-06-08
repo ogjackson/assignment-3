@@ -22,7 +22,7 @@ searchButton.addEventListener("click", executeSearch);
 const query = new URLSearchParams(window.location.search).get('q');
 
 const resultsFor = document.getElementById("resultsFor");
-resultsFor.textContent = `Results for "${query}"`;
+resultsFor.innerHTML = `<span class="grey">Results for</span> "<span class="black">${query}</span>"`;
 
 
 if (query) {
@@ -57,7 +57,7 @@ if (query) {
             productLink.textContent = product.name;
         
             const productType = document.createElement("p");
-            productType.textContent = product.type;
+            productType.innerHTML = `<span class="grey">${product.type}</span>`;
         
             productNameType.appendChild(productLink);
             productNameType.appendChild(productType);

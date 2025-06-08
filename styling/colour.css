@@ -1,22 +1,45 @@
 body {
     background-color: #F5F2ED;
     color: #000000;
-    font-family: Helvetica, sans-serif;
 }
 
-ul {
-    text-decoration: none;
-    list-style: none;
+nav {
+    background-color: #F5F2ED;
+}
+
+.grey {
+    color: #707070;
+}
+
+nav input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #707070;
+    border-bottom: 1px solid #707070;
 }
 
 a {
     color: inherit;
-    text-decoration: none;
 }
+
+main img {
+    border: 1px solid #000000;
+}
+
+
+
+
+
+
 
 #homepage {
     color: #F5F2ED;
 } 
+
+#homepage nav {
+    background-color: transparent;
+}
 
 #homepage ul {
     color: #F5F2ED;
