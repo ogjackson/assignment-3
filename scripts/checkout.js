@@ -1,11 +1,15 @@
 const checkoutCart = `
-    <h2>CART</h2>
+    <h1>CART</h1>
     <div id="checkoutCartContents"></div>
     <div>
-        <p>Subtotal</p>
-        <p id="checkoutSubtotal"></p>
-        <p>Shipping = 250$</p>
-        <p>Total</p>
+        <div>
+            <p>Subtotal</p>
+            <p id="checkoutSubtotal"></p>
+        </div>
+        <div>
+            <p>Shipping = 250$</p>
+            <p>Total</p>
+        </div>
         <p id="checkoutTotal"></p>
     </div>
 `
@@ -27,10 +31,17 @@ function loadCheckoutCart() {
 
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
-            <strong>${item.name}</strong><br>
-            ${item.price}<br>
-            ${item.size}<br>
-            ${item.material}<br><br>
+        <img src="/assets/product-photos/${item.id}.jpg">
+        <div>
+            <div>
+                <strong>${item.name}</strong>
+                <span><br>$${item.price}</span>
+            </div>
+            <div>
+                <span>${item.size}</span>
+                <span><br>${item.material}</span>
+            </div>
+        </div>
         `;
         checkoutCartContents.appendChild(cartItem);
     });

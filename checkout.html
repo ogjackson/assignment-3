@@ -7,12 +7,13 @@
     <title>Checkout</title>
 </head>
 
-<body>
+<body id="checkoutPage">
 
     <nav id="header"></nav>
 
     <main>
-        <h1>Checkout</h1>
+        <div>
+            <h1>Checkout</h1>
 
             <h2>Contact</h2>
             <input type="email" name="email" placeholder="Email"><br>
@@ -20,23 +21,23 @@
           
             <h2>Delivery</h2>
             <input type="text" name="country" placeholder="Country / Region"><br>
-            <input type="text" name="firstName" placeholder="First name"><input type="text" name="lastName" placeholder="Last name"><br>
+            <section><input type="text" name="firstName" placeholder="First name"><input type="text" name="lastName" placeholder="Last name"></section><br>
             <input type="text" name="company" placeholder="Company (optional)"><br>
             <input type="text" name="address" placeholder="Address" required><br>
             <input type="text" name="apartment" placeholder="Apartment, suite, etc (optional)"><br>
-            <input type="text" name="city" placeholder="City" required><input type="text" name="state" placeholder="State" required><input type="text" name="postcode" placeholder="Postcode" required><br>
-          
+            <section><input type="text" name="city" placeholder="City" required><input type="text" name="state" placeholder="State" required><input type="text" name="postcode" placeholder="Postcode" required></section><br>
+
             <h2>Payment</h2>
             <input type="text" name="cardNumber" placeholder="Card number"><br>
-            <input type="month" name="expiryDate" placeholder="Expiry date (MM/YY)"><br>
-            <input type="text" name="securityCode" placeholder="Security code"><br>
+            <section><input type="month" name="expiryDate" placeholder="Expiry date (MM/YY)"><br><input type="text" name="securityCode" placeholder="Security code"></section><br>
             <input type="text" name="nameOnCard" placeholder="Name on card"><br>
           
             <button type="submit" id="payNow">Pay now</button>
           
-    </main>
+        </div>
 
-    <div id="checkoutCart"></div>
+        <div id="checkoutCart"></div>
+    </main>
 
     <div id="cartMenu"></div>
 

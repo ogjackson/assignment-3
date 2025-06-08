@@ -23,11 +23,13 @@ const cartMenu = `
         <img class="icon" id="closeCart" src="assets/common/close-white.svg">
     </div>
     <div id="cartContents"></div>
-    <div>
-        <p>Subtotal</p>
-        <p id="subtotal"></p>
+    <div id="cartPrice">
+        <div>
+            <p>Subtotal</p>
+            <p id="subtotal"></p>
+        </div>
+        <button id="checkout">Checkout</button>
     </div>
-    <button id="checkout">Checkout</button>
 `
 
 document.getElementById("header").innerHTML = header;
@@ -56,16 +58,23 @@ function loadCart() {
 
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
-            <strong>${item.name}</strong><br>
-            ${item.price}<br>
-            ${item.size}<br>
-            ${item.material}
-            <button id="${item.id}" class="removeFromCart">X</button>
+        <img src="/assets/product-photos/${item.id}.jpg">
+        <div>
+            <div>
+                <strong>${item.name}</strong>
+                <span><br>$${item.price}</span>
+            </div>
+            <div>
+                <span>${item.size}</span>
+                <span><br>${item.material}</span>
+            </div>
+        </div>
+        <button id="${item.id}" class="removeFromCart">X</button>
         `;
         cartContents.appendChild(cartItem);
     });
 
-    document.getElementById("subtotal").textContent = `${subtotal}`;
+    document.getElementById("subtotal").textContent = `$${subtotal}`;
 
     document.querySelectorAll(".removeFromCart").forEach(button => {
         button.addEventListener("click", (click) => {
