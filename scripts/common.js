@@ -43,9 +43,9 @@ const headerWhite = `
     <a href="./index.html" class="logo"><b>proud</b>furniture</a>
 
     <div>
-        <img class="icon" id="searchButton" src="assets/common/search-white.svg">
+        <img class="icon" id="searchButton" src="./assets/common/search-white.svg">
         <input type="text" id="searchBox" placeholder="Search...">
-        <img class="icon" id="cartButton" src="assets/common/cart-white.svg">
+        <img class="icon" id="cartButton" src="./assets/common/cart-white.svg">
     </div>
     </section>
 `
