@@ -5,6 +5,7 @@ const header = `
 
     <ul id="mobileMenu">
         <img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg">
+        <br>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./search.html?q=all">Shop</a></li>
         <li><a href="./search.html?q=all"">Sale</a></li>
@@ -30,6 +31,7 @@ const headerWhite = `
 
     <ul id="mobileMenu">
         <img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg">
+        <br>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./search.html?q=all">Shop</a></li>
         <li><a href="./search.html?q=all">Sale</a></li>
