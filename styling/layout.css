@@ -219,6 +219,11 @@ nav div {
         justify-content: space-between;
         height: 100px;
     }
+
+    #cartPrice > button {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
 }
 
 
