@@ -1,16 +1,18 @@
 const checkoutCart = `
-    <h1>CART</h1>
     <div id="checkoutCartContents"></div>
-    <div>
+    <div id="checkoutCartPrice">
         <div>
             <p>Subtotal</p>
             <p id="checkoutSubtotal"></p>
         </div>
         <div>
-            <p>Shipping = 250$</p>
-            <p>Total</p>
+            <p>Shipping</p>
+            <p>250$</p>
         </div>
-        <p id="checkoutTotal"></p>
+        <div id=total>
+            <p>Total</p>
+            <p id="checkoutTotal"></p>
+        </div>
     </div>
 `
 
@@ -46,7 +48,7 @@ function loadCheckoutCart() {
         checkoutCartContents.appendChild(cartItem);
     });
 
-    document.getElementById("checkoutSubtotal").textContent = `${subtotal}`;
+    document.getElementById("checkoutSubtotal").textContent = `$${subtotal}`;
     document.getElementById("checkoutTotal").textContent = `${subtotal + 250}`;
 };
 

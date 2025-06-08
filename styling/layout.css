@@ -62,7 +62,7 @@ nav div {
     height: 20px;
 }
 
-#cartContents, #checkoutCarContents {
+#cartContents, #checkoutCartContents {
     padding: 20px 0;
     flex-grow: 1;
     overflow-y: auto;
@@ -240,11 +240,19 @@ body {
     padding: 5vh 5vw;
 }
 
+#checkoutCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
 #checkoutPage > main section {
     display: flex;
 }
 
-#checkoutCart {
+#checkoutPage #checkoutCartDiv {
     border-left: 1px solid;
 }
 
@@ -256,4 +264,37 @@ body {
 #checkoutPage input {
     width: 100%;
     box-sizing: border-box;
+}
+
+#checkoutCartPrice > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+#checkoutPage #total {
+    border-top: 1px solid;
+}
+
+
+/* CONFIRMATION */
+
+#confirmationPage main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#confirmationPage main > a {
+    margin-bottom: 50px;
+}
+
+#confirmationPage #orderDetails {
+    display: flex;
+}
+
+#confirmationPage #orderDetails > div {
+    width: 20vw;
+    border: 1px solid;
+    padding-left: 20px;
 }
