@@ -58,7 +58,7 @@ function loadCart() {
 
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
-        <img src="/assets/product-photos/${item.id}.jpg">
+        <img src="./assets/product-photos/${item.id}.jpg">
         <div>
             <div>
                 <strong>${item.name}</strong>
