@@ -3,7 +3,7 @@ const products = [
         id: 'admiral',
         type: 'Recliner',
         name: 'Admiral',
-        image: '/assets/product-photos/admiral.jpg',
+        image: './assets/product-photos/admiral.jpg',
         description: 'The ultimate in comfort and support, available in fabric or leather.',
         price: '1750',
         sizes: ['2480w x 870h x 680d', '2280w x 870h x 680d', '2080w x 870h x 680d'],

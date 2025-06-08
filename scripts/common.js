@@ -1,10 +1,16 @@
 const header = `
     <section>
-    <ul>
+
+    <img class="icon" id="menuButtonOpen" src="./assets/common/menu-black.svg">
+
+    <ul id="mobileMenu">
+        <li><img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg"></li>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./shop.html">Shop</a></li>
         <li><a href="./sale.html">Sale</a></li>
         <li><a href="./about.html">About</a></li>
+        <li class="logo" id="mobileLogo"><a href="./index.html">proudfurniture</a></li>
+
      </ul>
 
     <a href="./index.html" class="logo">proudfurniture</a>
@@ -34,6 +40,18 @@ const cartMenu = `
 
 document.getElementById("header").innerHTML = header;
 document.getElementById("cartMenu").innerHTML = cartMenu;
+
+const menu = document.getElementById('mobileMenu');
+const openBtn = document.getElementById('menuButtonOpen');
+const closeBtn = document.getElementById('menuButtonClose');
+
+const toggleMenu = () => {
+    menu.classList.toggle('active');
+};
+
+openBtn.addEventListener('click', toggleMenu);
+closeBtn.addEventListener('click', toggleMenu);
+
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 

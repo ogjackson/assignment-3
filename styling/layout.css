@@ -1,8 +1,29 @@
+/* UNIVERSAL SETTINGS */
+
+body {
+    padding: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.icon {
+    height: 25px;
+}
+
 /* HEADER STYLING */
 
 nav {
     margin-bottom: 15vh;
-  }
+}
+
+#menuButtonOpen, #menuButtonClose, #mobileLogo {
+    display: none;
+    cursor: pointer;
+}
 
 nav section {
     display: flex;
@@ -24,17 +45,57 @@ nav div {
     gap: 15px;
 }
 
+@media screen and (max-width: 600px) {
+    nav section {
+        position: relative;
+    }
+    
+    #menuButtonOpen, #menuButtonClose {
+        display: block;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 25px;
+        background-color: rgb(20, 20, 20);
+        color: antiquewhite;
+        transform: translate(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    nav ul.active {
+        transform: translate(0);
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+    .mobileLogo {
+        margin-top: auto;
+        padding-top: 40px;
+    }
+
+}
+
 
 /* CART STYLING */
 
-#cartMenu, #cartPrice, #cartContents {
-    box-sizing: border-box;
+#cartMenu,
+#cartPrice,
+#cartContents,
+#checkoutCart {
+    display: flex;
+    flex-direction: column;
 }
 
 #cartMenu {
-    
-    display: flex;
-    flex-direction: column;
     position: fixed;
     padding: 20px 25px;
     top: 0;
@@ -47,8 +108,15 @@ nav div {
     color: antiquewhite;
 }
 
+@media screen and (max-width: 600px) {
+    #cartMenu {
+        position: fixed;
+        width: 100vw;
+    }
+}
+
 #cartMenu.active {
-    transform: translate(0)
+    transform: translate(0);
 }
 
 #cartHeader {
@@ -62,34 +130,33 @@ nav div {
     height: 20px;
 }
 
-#cartContents, #checkoutCartContents {
+#cartContents,
+#checkoutCartContents {
     padding: 20px 0;
     flex-grow: 1;
     overflow-y: auto;
 }
 
-#cartContents > div, #checkoutCartContents > div {
+#cartContents > div,
+#checkoutCartContents > div {
     padding: 20px 0;
     display: flex;
 }
 
-#cartContents img, #checkoutCartContents img {
+#cartContents img,
+#checkoutCartContents img {
     width: 100px;
     height: 100px;
     padding-right: 10px;
     object-fit: cover;
 }
 
-#cartContents > div > div, #checkoutCartContents > div > div {
+#cartContents > div > div,
+#checkoutCartContents > div > div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100px;
-}
-
-#cartPrice {
-    display: flex;
-    flex-direction: column;
 }
 
 #cartPrice > div {
@@ -102,16 +169,6 @@ nav div {
 
 #cartPrice > button {
     margin-top: 20px;
-}
-
-/* UNIVERSAL */
-
-body {
-    padding: 20px;
-}
-
-.icon {
-    height: 25px;
 }
 
 
@@ -146,7 +203,7 @@ body {
 }
 
 
-/* PRODUCT LISTING / SEARCH RESULTS*/
+/* PRODUCT LISTING / SEARCH RESULTS */
 
 #results img {
     width: 320px;
@@ -181,13 +238,13 @@ body {
     margin: 0;
 }
 
+
 /* PRODUCT PAGE */
 
 #product {
     display: flex;
     height: 75vh;
     max-width: 100vw;
-    box-sizing: border-box;
 }
 
 #product > img {
@@ -201,7 +258,6 @@ body {
     padding-top: 0px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
 
 #product section > div {
@@ -240,14 +296,6 @@ body {
     padding: 5vh 5vw;
 }
 
-#checkoutCart {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-
 #checkoutPage > main section {
     display: flex;
 }
@@ -256,28 +304,18 @@ body {
     border-left: 1px solid;
 }
 
-#checkoutPage h1 {
+#checkoutPage h1,
+#checkoutCartDiv h1 {
     padding-bottom: 20px;
     border-bottom: 1px solid;
 }
 
 #checkoutPage input {
     width: 100%;
-    box-sizing: border-box;
-}
-
-#checkoutCartPrice > div {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-}
-
-#checkoutPage #total {
-    border-top: 1px solid;
 }
 
 
-/* CONFIRMATION */
+/* ORDER CONFIRMATION */
 
 #confirmationPage main {
     display: flex;
@@ -297,4 +335,8 @@ body {
     width: 20vw;
     border: 1px solid;
     padding-left: 20px;
+}
+
+#confirmationPage #checkoutCart {
+    width: 30vw;
 }

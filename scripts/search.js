@@ -1,15 +1,23 @@
 const searchBox = document.getElementById('searchBox');
+const searchButton = document.getElementById("searchButton");
 const results = document.getElementById('results');
 
-searchBox.addEventListener("keypress", (search) => {
-    if (search.key === "Enter") {
-        let query = searchBox.value.replaceAll(' ', '');
-        console.log(query);
-        if (query) {
-            window.location.href = `./search.html?q=${query}`;
-        }
+function executeSearch() {
+    const query = searchBox.value.replaceAll(' ', '');
+    console.log(query);
+    if (query) {
+        window.location.href = `./search.html?q=${query}`;
+    }
+}
+
+searchBox.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        executeSearch();
     }
 });
+
+
+searchButton.addEventListener("click", executeSearch);
 
 const query = new URLSearchParams(window.location.search).get('q');
 
