@@ -32,7 +32,10 @@ if (query) {
         return product.name.toLowerCase().includes(query) || product.type.toLowerCase().includes(query);
     }
 
-    if (resultsCount.length > 0) {
+    
+    if (query === "all") {
+        resultsCount = products;
+    } else if (resultsCount.length > 0) {
         const ul = document.createElement("ul");
         resultsCount.forEach(product => {
             const li = document.createElement("li");

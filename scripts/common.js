@@ -6,9 +6,9 @@ const header = `
     <ul id="mobileMenu">
         <img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./shop.html">Shop</a></li>
-        <li><a href="./sale.html">Sale</a></li>
-        <li><a href="./about.html">About</a></li>
+        <li><a href="./search.html?q=all">Shop</a></li>
+        <li><a href="./search.html?q=all"">Sale</a></li>
+        <li><a href="./index.html">About</a></li>
         <li class="logo" id="mobileLogo"><a href="./index.html">proudfurniture</a></li>
 
      </ul>
@@ -31,9 +31,9 @@ const headerWhite = `
     <ul id="mobileMenu">
         <img class="icon" id="menuButtonClose" src="./assets/common/menu-white.svg">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./shop.html">Shop</a></li>
-        <li><a href="./sale.html">Sale</a></li>
-        <li><a href="./about.html">About</a></li>
+        <li><a href="./search.html?q=all">Shop</a></li>
+        <li><a href="./search.html?q=all">Sale</a></li>
+        <li><a href="./index.html">About</a></li>
         <li class="logo" id="mobileLogo"><a href="./index.html">proudfurniture</a></li>
 
     </ul>

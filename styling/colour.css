@@ -19,6 +19,15 @@ nav input {
     border-bottom: 1px solid #707070;
 }
 
+main input, main select {
+    background: transparent;
+    color: #707070;
+}
+
+main input {
+    border: 1px solid #707070;
+}
+
 a {
     color: inherit;
 }
@@ -27,8 +36,23 @@ main img {
     border: 1px solid #000000;
 }
 
+button {
+    padding: 10px;
+    border: 1px solid #707070;
+    border-radius: 0px;
+    background: none;   
+    box-shadow: none;
+}
 
+#cartMenu, #cartMenu button {
+    color: white;
+}
 
+#payNow {
+    color: #F5F2ED;
+    border: #F5F2ED;
+    background-color: #000000;
+}
 
 
 

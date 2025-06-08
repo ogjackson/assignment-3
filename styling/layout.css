@@ -2,7 +2,7 @@
 
 body {
     padding: 20px;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 *,
@@ -13,6 +13,16 @@ body {
 
 .icon {
     height: 25px;
+}
+
+main input, main select {
+    background: transparent;
+    font-size: inherit;
+    padding: 5px;
+}
+
+main select {
+    border: none;
 }
 
 /* HEADER STYLING */
@@ -117,13 +127,6 @@ nav div {
     z-index: 1000;
 }
 
-@media screen and (max-width: 600px) {
-    #cartMenu {
-        position: fixed;
-        width: 100vw;
-    }
-}
-
 #cartMenu.active {
     transform: translate(0);
 }
@@ -156,7 +159,7 @@ nav div {
 #checkoutCartContents img {
     width: 100px;
     height: 100px;
-    padding-right: 10px;
+    margin-right: 10px;
     object-fit: cover;
 }
 
@@ -178,6 +181,37 @@ nav div {
 
 #cartPrice > button {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #cartMenu {
+        position: fixed;
+        width: 100vw;
+    }
+
+        #cartContents {
+        padding: 20px 0;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    #cartContents > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cartContents img {
+        width: 100vw;
+        object-fit: cover;
+    }
+
+    #cartContents > div > div {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+    }
 }
 
 
@@ -225,6 +259,15 @@ nav div {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 600px) {
+    #results img {
+        width: 40vw;
+        height: 40vw;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+}
+
 #results ul {
     padding: 0;
     margin: 0;
@@ -254,6 +297,10 @@ nav div {
 
 /* PRODUCT PAGE */
 
+#productPage {
+    padding-top: 20vh;
+}
+
 #product {
     display: flex;
     height: 75vh;
@@ -279,16 +326,52 @@ nav div {
 }
 
 .productOptions {
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
     border-bottom: 1px solid;
+}
+
+.productOptions > select, .productOptions >input {
+    width: 10vw;
 }
 
 #addToCart {
     margin-top: 20px;
     width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    #product {
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        max-width: 90vw;
+    }
+
+    #product > img {
+        width: 90vw;
+        height: 90vw;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    #product section {
+        width: 90vw;
+        padding-top: 50px;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .productOptions > select, .productOptions >input {
+        width: 50vw;
+    }
+    
+    #product section > div {
+        margin-top: 50px;
+    }
 }
 
 
@@ -311,6 +394,7 @@ nav div {
 
 #checkoutPage > main section {
     display: flex;
+    gap: 5px;
 }
 
 #checkoutPage #checkoutCartDiv {
@@ -325,6 +409,50 @@ nav div {
 
 #checkoutPage input {
     width: 100%;
+}
+
+#checkoutCartPrice > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    border-top: 1px solid;
+}
+
+@media screen and (max-width: 600px) {
+    #checkoutPage > main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #checkoutPage > main > div {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    
+    #checkoutPage > main section {
+        display: flex;
+        gap: 5px;
+    }
+    
+    #checkoutPage #checkoutCartPrice {
+        border-left: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #F5F2ED;
+        z-index: 999;
+        padding: 20px;
+    }
+
+    #checkoutPage #checkoutCartContents {
+        display: none;
+    }
 }
 
 
@@ -352,4 +480,35 @@ nav div {
 
 #confirmationPage #checkoutCart {
     width: 30vw;
+}
+
+#checkoutCartDiv {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #confirmationPage main {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #confirmationPage main > a {
+        margin-bottom: 50px;
+    }
+    
+    #confirmationPage #orderDetails {
+        width: 100vw;
+        display: flex;
+    }
+    
+    #confirmationPage #orderDetails > div {
+        width: 45vw;
+        border: 1px solid;
+    }
+
+    #confirmationPage #checkoutCart {
+        width: 100vw;
+    }
 }

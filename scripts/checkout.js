@@ -7,7 +7,7 @@ const checkoutCart = `
         </div>
         <div>
             <p>Shipping</p>
-            <p>250$</p>
+            <p>$250</p>
         </div>
         <div id=total>
             <p>Total</p>
@@ -49,7 +49,7 @@ function loadCheckoutCart() {
     });
 
     document.getElementById("checkoutSubtotal").textContent = `$${subtotal}`;
-    document.getElementById("checkoutTotal").textContent = `${subtotal + 250}`;
+    document.getElementById("checkoutTotal").textContent = `$${subtotal + 250}`;
 };
 
 const payNow = document.getElementById("payNow");

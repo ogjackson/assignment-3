@@ -30,6 +30,46 @@ a {
     text-decoration: underline;
 }
 
+#price {
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+#product h1 {
+    margin-bottom: 0;
+}
+
+#product span {
+    line-height: 150%;
+}
+
+#description {
+    font-size: 2vh;
+    font-weight: 500;
+    line-height: 125%;
+}
+
 #homepage h1 {
     line-height: 0;
+}
+
+#cartContents {
+    font-size: small;
+}
+
+#checkoutPage h1 {
+    font-size: 5vh;
+}
+
+#checkoutPage h2 {
+    font-size: 3vh;
+}
+
+
+#total {
+    font-size: 3vh;
+}
+
+#confirmationPage div h2, #checkoutCartDiv h1 {
+    font-size: 2vh;
 }
